@@ -102,7 +102,7 @@ if user_input := st.chat_input("Ayo tanya tanya tentang beriklan"):
         messages=st.session_state.messages ,
         system = st.session_state["all_prompts"],
         model=MODEL,
-        max_tokens=150,  # Adjust the max_tokens value as needed
+        max_tokens=1000,  # Adjust the max_tokens value as needed
     )
     response=message.content[0].text
     st.session_state.messages.append({"role": "assistant", "content": response})
